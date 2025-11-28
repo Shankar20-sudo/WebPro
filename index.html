@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pushti Milk Co. - Premium Organic Dairy Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header" id="home">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-icon">🥛</span>
+                    <span class="logo-text">Pushti Milk Co.</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#products" class="nav-link">Products</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="cart-btn" onclick="toggleCart()">
+                        🛒 <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Premium Organic Dairy Products</h1>
+                <p class="hero-subtitle">Fresh from our family farm to your table since generations</p>
+                <div class="hero-cta">
+                    <a href="#products" class="btn btn-primary">Shop Now</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="hero-contact-info">
+                    <div class="contact-item">
+                        <span class="icon">📞</span>
+                        <span>+91-98765-43210</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">✉️</span>
+                        <span>info@pushtimilk.co.in</span>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <div class="scroll-arrow">↓</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌾</div>
+                    <h3 class="feature-title">100% Organic</h3>
+                    <p class="feature-description">No chemicals or additives. Pure natural dairy</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🐄</div>
+                    <h3 class="feature-title">Healthy Cows</h3>
+                    <p class="feature-description">Well-cared animals produce quality milk</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Fresh Daily</h3>
+                    <p class="feature-description">Produced and delivered fresh every morning</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3 class="feature-title">Quality Certified</h3>
+                    <p class="feature-description">ISO certified, FDA approved production</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Premium Products</h2>
+                <p class="section-subtitle">Fresh, wholesome dairy products for your family</p>
+            </div>
+
+            <div class="product-filters">
+                <button class="filter-btn active" onclick="filterProducts('all')">All Products</button>
+                <button class="filter-btn" onclick="filterProducts('Milk')">Milk</button>
+                <button class="filter-btn" onclick="filterProducts('Dairy Products')">Dairy Products</button>
+                <button class="filter-btn" onclick="filterProducts('Specialty')">Specialty</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Pushti Milk Co.</h2>
+                    <p class="about-description">
+                        For generations, Pushti Milk Co. has been a trusted name in premium dairy products. Located in the heart of Banasthali, Rajasthan, our family-owned farm has been dedicated to producing the finest quality milk and dairy products.
+                    </p>
+                    <p class="about-description">
+                        We believe in traditional farming practices combined with modern hygiene standards. Our cows are raised in a stress-free environment with natural feed, ensuring the purest and most nutritious milk for your family.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Years Heritage</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Organic</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5000+</div>
+                            <div class="stat-label">Happy Families</div>
+                        </div>
+                    </div>
+
+                    <div class="certifications">
+                        <h3>Our Certifications</h3>
+                        <div class="cert-badges">
+                            <span class="cert-badge">ISO 22000:2018</span>
+                            <span class="cert-badge">FSSAI Registered</span>
+                            <span class="cert-badge">Organic Certified</span>
+                            <span class="cert-badge">GMP Certified</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        <div class="placeholder-icon">🐄</div>
+                        <p>Our Happy Cows</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mission-vision">
+                <div class="mission-card">
+                    <h3>Our Mission</h3>
+                    <p>To provide families with the freshest, most nutritious dairy products while maintaining sustainable and ethical farming practices.</p>
+                </div>
+                <div class="mission-card">
+                    <h3>Our Vision</h3>
+                    <p>To be the most trusted dairy brand in India, known for quality, purity, and commitment to traditional values.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Gallery</h2>
+                <p class="section-subtitle">A glimpse into our farm and production</p>
+            </div>
+
+            <div class="gallery-filters">
+                <button class="gallery-filter-btn active" onclick="filterGallery('all')">All</button>
+                <button class="gallery-filter-btn" onclick="filterGallery('farm')">Farm</button>
+                <button class="gallery-filter-btn" onclick="filterGallery('products')">Products</button>
+                <button class="gallery-filter-btn" onclick="filterGallery('team')">Team</button>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Customers Say</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The best milk I've ever tasted! You can really taste the difference in quality. My kids love it!"</p>
+                    <div class="testimonial-author">
+                        <strong>Priya Sharma</strong>
+                        <span>Jaipur</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Their ghee is pure gold! Authentic taste just like my grandmother used to make. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <strong>Rajesh Kumar</strong>
+                        <span>Banasthali</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Fresh paneer delivered every morning. Perfect for our restaurant. Great service and quality!"</p>
+                    <div class="testimonial-author">
+                        <strong>Amit Patel</strong>
+                        <span>Tonk</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">We'd love to hear from you</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" id="contactName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="contactEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="contactPhone" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="contactSubject" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" id="contactMessage" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full-width">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info-wrapper">
+                    <div class="contact-info-card">
+                        <h3>Contact Information</h3>
+                        <div class="info-item">
+                            <span class="info-icon">📞</span>
+                            <div>
+                                <strong>Phone</strong>
+                                <p>+91-98765-43210</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">✉️</span>
+                            <div>
+                                <strong>Email</strong>
+                                <p>info@pushtimilk.co.in</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <div>
+                                <strong>Address</strong>
+                                <p>Near Dairy Farm, Banasthali, Rajasthan, India</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🕒</span>
+                            <div>
+                                <strong>Business Hours</strong>
+                                <p>6:00 AM - 8:00 PM Daily</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h3>Follow Us</h3>
+                        <div class="social-buttons">
+                            <a href="https://facebook.com/pushtimilk" target="_blank" class="social-btn facebook">Facebook</a>
+                            <a href="https://instagram.com/pushtimilk" target="_blank" class="social-btn instagram">Instagram</a>
+                            <a href="https://wa.me/919876543210" target="_blank" class="social-btn whatsapp">WhatsApp</a>
+                            <a href="https://twitter.com/pushtimilk" target="_blank" class="social-btn twitter">Twitter</a>
+                        </div>
+                    </div>
+
+                    <div class="map-placeholder">
+                        <div class="map-icon">🗺️</div>
+                        <p>Banasthali, Rajasthan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Pushti Milk Co.</h3>
+                    <p class="footer-description">Premium organic dairy products from our family farm to your table since generations.</p>
+                    <div class="newsletter">
+                        <h4>Newsletter</h4>
+                        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Our Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="#products">Fresh Milk</a></li>
+                        <li><a href="#products">Curd &amp; Yogurt</a></li>
+                        <li><a href="#products">Pure Ghee</a></li>
+                        <li><a href="#products">Fresh Paneer</a></li>
+                        <li><a href="#products">Butter</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li>📞 +91-98765-43210</li>
+                        <li>✉️ info@pushtimilk.co.in</li>
+                        <li>📍 Near Dairy Farm, Banasthali, Rajasthan</li>
+                        <li>🕒 6:00 AM - 8:00 PM Daily</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pushti Milk Co. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://facebook.com/pushtimilk" target="_blank">📘</a>
+                    <a href="https://instagram.com/pushtimilk" target="_blank">📷</a>
+                    <a href="https://wa.me/919876543210" target="_blank">💬</a>
+                    <a href="https://twitter.com/pushtimilk" target="_blank">🐦</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <button class="close-cart" onclick="toggleCart()">✕</button>
+            </div>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">₹0</span>
+                </div>
+                <button class="btn btn-primary btn-full-width" onclick="checkout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+            <div class="lightbox-image-container">
+                <div class="lightbox-image" id="lightboxImage"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
